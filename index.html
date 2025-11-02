@@ -250,6 +250,14 @@
             gap: 10px;
         }
 
+        /* --- FIX: ADDED THIS BLOCK to control mobile buttons from CSS --- */
+        .nav-buttons-mobile {
+            display: none; /* Hide by default */
+            margin-top: 20px;
+            flex-direction: column;
+            gap: 10px;
+        }
+
         .burger-menu {
             display: none;
             font-size: 2.5rem;
@@ -941,7 +949,9 @@
 
 
         /* --- [13] RESPONSIVENESS --- */
-        @media (max-width: 992px) {
+        
+        /* --- FIX: Changed from 992px to 1080px to fix desktop overlap --- */
+        @media (max-width: 1080px) {
             h1 { font-size: 2.8rem; }
             h2 { font-size: 2rem; }
             section { padding: 80px 0; }
@@ -958,7 +968,7 @@
                 box-shadow: -10px 0 30px rgba(0,0,0,0.1);
                 transition: right 0.4s ease-in-out;
                 gap: 1.5rem;
-                z-index: 1000; /* --- THIS IS THE FIX --- */
+                z-index: 1000; /* --- FIX: Puts menu on top of content --- */
             }
             .nav-links.active {
                 right: 0; /* Slide in */
@@ -974,6 +984,17 @@
             .nav-buttons {
                 /* Hide buttons on mobile, they are in the nav */
                 display: none; 
+            }
+
+            /* --- FIX: ADDED THIS BLOCK to show buttons in mobile nav --- */
+            .nav-links.active .nav-buttons-mobile {
+                display: flex;
+            }
+    
+            /* --- FIX: ADDED THIS BLOCK to fix button cutoff --- */
+            .nav-buttons-mobile .btn {
+                display: block;
+                width: 100%;
             }
 
             #hero .container {
@@ -1046,15 +1067,16 @@
                 <li><a href="#arena">Live Arena</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li class="nav-buttons-mobile" style="display: none; margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
-                    <a href="https://ai.quizzicallabz.qzz.io" class="btn btn-secondary" style="color: var(--primary-purple); background: #f0f0f8;">Log In</a>
-                    <a href="https://ai.quizzicallabz.qzz.io" class="btn btn-primary">Start Free</a>
+                
+                <li class="nav-buttons-mobile">
+                    <a href="https://app.quizzicallabz.qzz.io" class="btn btn-secondary" style="color: var(--primary-purple); background: #f0f0f8;">Log In</a>
+                    <a href="https://app.quizzicallabz.qzz.io" class="btn btn-primary">Start Free</a>
                 </li>
             </ul>
             
             <div class="nav-buttons">
-                <a href="https://ai.quizzicallabz.qzz.io" class="btn btn-secondary">Log In</a>
-                <a href="https://ai.quizzicallabz.qzz.io" class="btn btn-primary">Start Free</a>
+                <a href="https://app.quizzicallabz.qzz.io" class="btn btn-secondary">Log In</a>
+                <a href="https://app.quizzicallabz.qzz.io" class="btn btn-primary">Start Free</a>
             </div>
 
             <i class='bx bx-menu burger-menu' id="burger-menu"></i>
@@ -1071,7 +1093,7 @@
                         Convert your notes, documents, and books into quizzes, flashcards, and exam practice instantly using AI.
                     </p>
                     <div class="hero-cta">
-                        <a href="https://ai.quizzicallabz.qzz.io" class="btn btn-primary">Start Free</a>
+                        <a href="https://app.quizzicallabz.qzz.io" class="btn btn-primary">Start Free</a>
                         <a href="#how-it-works" class="btn btn-ghost">Try Demo</a>
                     </div>
                 </div>
@@ -1219,22 +1241,22 @@
                         <div class="tab-content" id="ecat">
                             <h3>ECAT Engineering Prep</h3>
                             <p>Get ready for your Engineering College Admission Test. Practice complex problems in Physics, Chemistry, and Math with smart AI explanations for every solution.</p>
-                            <a href="https://ai.quizzicallabz.qzz.io" class="btn btn-primary">Start ECAT Prep <i class='bx bx-right-arrow-alt'></i></a>
+                            <a href="https://app.quizzicallabz.qzz.io" class="btn btn-primary">Start ECAT Prep <i class='bx bx-right-arrow-alt'></i></a>
                         </div>
                         <div class="tab-content" id="nts">
                             <h3>NTS / GAT Prep</h3>
                             <p>Master the NTS and GAT formats with extensive question banks covering quantitative reasoning, verbal ability, and analytical sections.</p>
-                            <a href="https://ai.quizzicallabz.qzz.io" class="btn btn-primary">Start NTS Prep <i class='bx bx-right-arrow-alt'></i></a>
+                            <a href="https://app.quizzicallabz.qzz.io" class="btn btn-primary">Start NTS Prep <i class='bx bx-right-arrow-alt'></i></a>
                         </div>
                         <div class="tab-content" id="css">
                             <h3>CSS / PMS Concept Builder</h3>
                             <p>Build a strong foundation for your CSS & PMS exams. Use AI to summarize compulsory subjects, practice MCQs, and generate quizzes from current affairs articles.</p>
-                            <a href="https://ai.quizzicallabz.qzz.io" class="btn btn-primary">Start CSS Prep <i class='bx bx-right-arrow-alt'></i></a>
+                            <a href="https://app.quizzicallabz.qzz.io" class="btn btn-primary">Start CSS Prep <i class='bx bx-right-arrow-alt'></i></a>
                         </div>
                         <div class="tab-content" id="board">
                             <h3>Board Exam Chapter-Wise Tests</h3>
                             <p>Conquer your F.Sc, ICS, or I.Com board exams. Upload your textbook chapters and let AI create unlimited chapter-wise tests to ensure you're 100% prepared.</p>
-                            <a href="https://ai.quizzicallabz.qzz.io" class="btn btn-primary">Start Board Prep <i class='bx bx-right-arrow-alt'></i></a>
+                            <a href="https://app.quizzicallabz.qzz.io" class="btn btn-primary">Start Board Prep <i class='bx bx-right-arrow-alt'></i></a>
                         </div>
                     </div>
                 </div>
@@ -1285,7 +1307,7 @@
                             <li><i class='bx bx-x'></i>Smart Explanations</li>
                             <li><i class='bx bx-x'></i>Flashcard Mode</li>
                         </ul>
-                        <a href="https://ai.quizzicallabz.qzz.io" class="btn btn-ghost">Start Free</a>
+                        <a href="https://app.quizzicallabz.qzz.io" class="btn btn-ghost">Start Free</a>
                     </div>
                     
                     <div class="price-card popular">
@@ -1301,7 +1323,7 @@
                             <li><i class='bx bx-check'></i>Smart Explanations</li>
                             <li><i class='bx bx-check'></i>Flashcard & Revision Mode</li>
                         </ul>
-                        <a href="https://ai.quizzicallabz.qzz.io" class="btn">Upgrade Now</a>
+                        <a href="https://app.quizzicallabz.qzz.io" class="btn">Upgrade Now</a>
                     </div>
 
                     <div class="price-card">
@@ -1317,7 +1339,7 @@
                             <li><i class='bx bx-check'></i>Student Performance Reports</li>
                             <li><i class='bx bx-check'></i>Dedicated Support</li>
                         </ul>
-                        <a href="https://ai.quizzicallabz.qzz.io/contact" class="btn btn-ghost">Contact Sales</a>
+                        <a href="https://app.quizzicallabz.qzz.io" class="btn btn-ghost">Contact Sales</a>
                     </div>
                 </div>
             </div>
@@ -1357,16 +1379,16 @@
                 <div class="footer-col">
                     <h4>Company</h4>
                     <ul class="footer-links">
-                        <li><a href="#">quizzicallabz.qzz.io/about-us</a></li>
-                        <li><a href="#">quizzicallabz.qzz.io/blog</a></li>
-                        <li><a href="#">quizzicallabz.qzz.io/contact</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Legal</h4>
                     <ul class="footer-links">
-                        <li><a href="#">quizzicallabz.qzz.io/privacy-policy</a></li>
-                        <li><a href="#">quizzicallabz.qzz.io/Terms-of-service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
                     </ul>
                 </div>
             </div>
@@ -1395,18 +1417,7 @@
             const navLinks = document.getElementById('nav-links');
             const mobileButtons = document.querySelector('.nav-buttons-mobile');
 
-            // Show mobile buttons in CSS only when nav is active
-            // This logic can be simplified in CSS, but let's be explicit.
-            if (window.innerWidth <= 992) {
-                 mobileButtons.style.display = 'flex';
-            }
-             window.addEventListener('resize', () => {
-                 if (window.innerWidth <= 992) {
-                    mobileButtons.style.display = 'flex';
-                 } else {
-                    mobileButtons.style.display = 'none';
-                 }
-             });
+            /* --- FIX: REMOVED the buggy JavaScript block that was here --- */
 
 
             burgerMenu.addEventListener('click', () => {
