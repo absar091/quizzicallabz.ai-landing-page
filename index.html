@@ -958,6 +958,7 @@
                 box-shadow: -10px 0 30px rgba(0,0,0,0.1);
                 transition: right 0.4s ease-in-out;
                 gap: 1.5rem;
+                z-index: 1000; /* --- THIS IS THE FIX --- */
             }
             .nav-links.active {
                 right: 0; /* Slide in */
@@ -1046,14 +1047,14 @@
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li class="nav-buttons-mobile" style="display: none; margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
-                    <a href="https://app.quizzicallabz.qzz.io" class="btn btn-secondary" style="color: var(--primary-purple); background: #f0f0f8;">Log In</a>
-                    <a href="https://app.quizzicallabz.qzz.io" class="btn btn-primary">Start Free</a>
+                    <a href="https://ai.quizzicallabz.qzz.io" class="btn btn-secondary" style="color: var(--primary-purple); background: #f0f0f8;">Log In</a>
+                    <a href="https://ai.quizzicallabz.qzz.io" class="btn btn-primary">Start Free</a>
                 </li>
             </ul>
             
             <div class="nav-buttons">
-                <a href="https://app.quizzicallabz.qzz.io" class="btn btn-secondary">Log In</a>
-                <a href="https://app.quizzicallabz.qzz.io" class="btn btn-primary">Start Free</a>
+                <a href="https://ai.quizzicallabz.qzz.io" class="btn btn-secondary">Log In</a>
+                <a href="https://ai.quizzicallabz.qzz.io" class="btn btn-primary">Start Free</a>
             </div>
 
             <i class='bx bx-menu burger-menu' id="burger-menu"></i>
@@ -1070,7 +1071,7 @@
                         Convert your notes, documents, and books into quizzes, flashcards, and exam practice instantly using AI.
                     </p>
                     <div class="hero-cta">
-                        <a href="https://app.quizzicallabz.qzz.io" class="btn btn-primary">Start Free</a>
+                        <a href="https://ai.quizzicallabz.qzz.io" class="btn btn-primary">Start Free</a>
                         <a href="#how-it-works" class="btn btn-ghost">Try Demo</a>
                     </div>
                 </div>
@@ -1218,22 +1219,22 @@
                         <div class="tab-content" id="ecat">
                             <h3>ECAT Engineering Prep</h3>
                             <p>Get ready for your Engineering College Admission Test. Practice complex problems in Physics, Chemistry, and Math with smart AI explanations for every solution.</p>
-                            <a href="https://app.quizzicallabz.qzz.io" class="btn btn-primary">Start ECAT Prep <i class='bx bx-right-arrow-alt'></i></a>
+                            <a href="https://ai.quizzicallabz.qzz.io" class="btn btn-primary">Start ECAT Prep <i class='bx bx-right-arrow-alt'></i></a>
                         </div>
                         <div class="tab-content" id="nts">
                             <h3>NTS / GAT Prep</h3>
                             <p>Master the NTS and GAT formats with extensive question banks covering quantitative reasoning, verbal ability, and analytical sections.</p>
-                            <a href="https://app.quizzicallabz.qzz.io" class="btn btn-primary">Start NTS Prep <i class='bx bx-right-arrow-alt'></i></a>
+                            <a href="https://ai.quizzicallabz.qzz.io" class="btn btn-primary">Start NTS Prep <i class='bx bx-right-arrow-alt'></i></a>
                         </div>
                         <div class="tab-content" id="css">
                             <h3>CSS / PMS Concept Builder</h3>
                             <p>Build a strong foundation for your CSS & PMS exams. Use AI to summarize compulsory subjects, practice MCQs, and generate quizzes from current affairs articles.</p>
-                            <a href="https://app.quizzicallabz.qzz.io" class="btn btn-primary">Start CSS Prep <i class='bx bx-right-arrow-alt'></i></a>
+                            <a href="https://ai.quizzicallabz.qzz.io" class="btn btn-primary">Start CSS Prep <i class='bx bx-right-arrow-alt'></i></a>
                         </div>
                         <div class="tab-content" id="board">
                             <h3>Board Exam Chapter-Wise Tests</h3>
                             <p>Conquer your F.Sc, ICS, or I.Com board exams. Upload your textbook chapters and let AI create unlimited chapter-wise tests to ensure you're 100% prepared.</p>
-                            <a href="https://app.quizzicallabz.qzz.io" class="btn btn-primary">Start Board Prep <i class='bx bx-right-arrow-alt'></i></a>
+                            <a href="https://ai.quizzicallabz.qzz.io" class="btn btn-primary">Start Board Prep <i class='bx bx-right-arrow-alt'></i></a>
                         </div>
                     </div>
                 </div>
@@ -1284,7 +1285,7 @@
                             <li><i class='bx bx-x'></i>Smart Explanations</li>
                             <li><i class='bx bx-x'></i>Flashcard Mode</li>
                         </ul>
-                        <a href="https://app.quizzicallabz.qzz.io" class="btn btn-ghost">Start Free</a>
+                        <a href="https://ai.quizzicallabz.qzz.io" class="btn btn-ghost">Start Free</a>
                     </div>
                     
                     <div class="price-card popular">
@@ -1300,7 +1301,7 @@
                             <li><i class='bx bx-check'></i>Smart Explanations</li>
                             <li><i class='bx bx-check'></i>Flashcard & Revision Mode</li>
                         </ul>
-                        <a href="https://app.quizzicallabz.qzz.io" class="btn">Upgrade Now</a>
+                        <a href="https://ai.quizzicallabz.qzz.io" class="btn">Upgrade Now</a>
                     </div>
 
                     <div class="price-card">
@@ -1316,7 +1317,7 @@
                             <li><i class='bx bx-check'></i>Student Performance Reports</li>
                             <li><i class='bx bx-check'></i>Dedicated Support</li>
                         </ul>
-                        <a href="https://app.quizzicallabz.qzz.io" class="btn btn-ghost">Contact Sales</a>
+                        <a href="https://ai.quizzicallabz.qzz.io/contact" class="btn btn-ghost">Contact Sales</a>
                     </div>
                 </div>
             </div>
@@ -1356,16 +1357,16 @@
                 <div class="footer-col">
                     <h4>Company</h4>
                     <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">quizzicallabz.qzz.io/about-us</a></li>
+                        <li><a href="#">quizzicallabz.qzz.io/blog</a></li>
+                        <li><a href="#">quizzicallabz.qzz.io/contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Legal</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">quizzicallabz.qzz.io/privacy-policy</a></li>
+                        <li><a href="#">quizzicallabz.qzz.io/Terms-of-service</a></li>
                     </ul>
                 </div>
             </div>
